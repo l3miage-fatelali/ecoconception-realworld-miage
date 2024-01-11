@@ -59,3 +59,7 @@ body {
   color: red !important;
   font-weight: bold;
 }
+
+.sign-in {
+  width: 15px;
+}
