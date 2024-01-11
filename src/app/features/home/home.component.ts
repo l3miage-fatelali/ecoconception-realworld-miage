@@ -13,7 +13,6 @@ import { ShowAuthedDirective } from "../../shared/show-authed.directive";
 @Component({
   selector: "app-home-page",
   templateUrl: "./home.component.html",
-  styleUrls: ["./home.component.css"],
   imports: [
     NgClass,
     ArticleListComponent,
