@@ -24,3 +24,10 @@ body {
     opacity: 0;
   }
 }
+
+.logo-font {
+  padding-top: 1em;
+  padding-right: 0;
+  padding-bottom: 2em;
+  padding-left: 0.5em;
+}
