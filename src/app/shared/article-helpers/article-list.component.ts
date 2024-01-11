@@ -61,7 +61,19 @@ export class ArticleListComponent implements OnDestroy {
       .subscribe((data) => {
         this.loading = LoadingState.LOADED;
         this.results = data.articles;
+        console.log(this.results);
 
+        let myResult: any[] = [];
+        this.results.forEach((element) => {
+          let retour = this.articlesService
+            .get(element.slug)
+            .pipe(takeUntil(this.destroy$))
+            .subscribe((elem) => {
+              console.log(elem);
+              myResult.push(elem);
+            });
+        });
+        this.results = myResult;
         // Used from http://www.jstips.co/en/create-range-0...n-easily-using-one-line/
         this.totalPages = Array.from(
           new Array(Math.ceil(data.articlesCount / this.limit)),
