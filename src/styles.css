@@ -9,3 +9,18 @@
 .page-link {
   cursor: pointer;
 }
+
+body {
+  animation: clignotant 1s infinite;
+}
+@keyframes clignotant {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
