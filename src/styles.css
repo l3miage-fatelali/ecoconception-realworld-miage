@@ -50,3 +50,8 @@ body {
   width: 250px !important;
   height: 250px !important;
 }
+
+.article-preview > a > ul > li > span {
+  color: red !important;
+  font-weight: bold;
+}
