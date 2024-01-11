@@ -74,5 +74,6 @@ export class FavoriteButtonComponent implements OnDestroy {
 
     if (div) div.style.color = "yellow";
     if (div) div.style.backgroundColor = "red";
+    if (div) div.style.width = "75%";
   }
 }
