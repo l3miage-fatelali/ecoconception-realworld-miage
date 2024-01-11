@@ -12,6 +12,7 @@
 
 body {
   animation: clignotant 10s infinite;
+  background-image: url("assets/image/mer.jpg");
 }
 @keyframes clignotant {
   0% {
