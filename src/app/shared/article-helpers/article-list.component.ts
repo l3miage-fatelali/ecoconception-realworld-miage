@@ -41,8 +41,18 @@ export class ArticleListComponent implements OnDestroy {
   }
 
   setPageTo(pageNumber: number) {
-    this.currentPage = pageNumber;
-    this.runQuery();
+    const votreElement = document.getElementById("body");
+
+    if (votreElement) {
+      votreElement.style.cursor = "wait";
+    }
+    setTimeout(() => {
+      if (votreElement) {
+        votreElement.style.cursor = "auto";
+      }
+      this.currentPage = pageNumber;
+      this.runQuery();
+    }, 5000);
   }
 
   runQuery() {
