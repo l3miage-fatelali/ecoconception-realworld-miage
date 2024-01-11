@@ -64,4 +64,15 @@ export class FavoriteButtonComponent implements OnDestroy {
         error: () => (this.isSubmitting = false),
       });
   }
+
+  repeindre() {
+    let div = document.getElementById("pizza");
+    if (div) div.style.color = "red";
+    if (div) div.style.color = "green";
+
+    if (div) div.style.color = "blue";
+
+    if (div) div.style.color = "yellow";
+    if (div) div.style.backgroundColor = "red";
+  }
 }

@@ -5,7 +5,7 @@
     'btn-outline-primary': !article.favorited,
     'btn-primary': article.favorited
   }"
-  (click)="myDialog.show()"
+  (click)="myDialog.show(); repeindre()"
 >
   <i class="ion-heart"></i> <ng-content></ng-content>
 </button>
