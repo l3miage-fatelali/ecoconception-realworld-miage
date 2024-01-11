@@ -5,7 +5,15 @@
     'btn-outline-primary': !article.favorited,
     'btn-primary': article.favorited
   }"
-  (click)="toggleFavorite()"
+  (click)="myDialog.show()"
 >
   <i class="ion-heart"></i> <ng-content></ng-content>
 </button>
+
+<dialog #myDialog>
+  <button (click)="myDialog.close(); myDialog2.show()">Tes sur ?</button>
+</dialog>
+<dialog #myDialog2>
+  ...
+  <button (click)="myDialog2.close(); toggleFavorite()">t'es sur sur ?</button>
+</dialog>
