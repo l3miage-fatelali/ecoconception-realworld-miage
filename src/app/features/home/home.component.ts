@@ -1,5 +1,5 @@
 import { Component, inject, OnDestroy, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+import * as ng from "@angular/router";
 import { TagsService } from "../../core/services/tags.service";
 import { ArticleListConfig } from "../../core/models/article-list-config.model";
 import { AsyncPipe, NgClass, NgForOf } from "@angular/common";
@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   destroy$ = new Subject<void>();
 
   constructor(
-    private readonly router: Router,
+    private readonly router: ng.Router,
     private readonly userService: UserService
   ) {}
 
